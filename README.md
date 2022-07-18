@@ -14,13 +14,13 @@
 
 ### 二、git修改本地用户名和邮箱（安装git时候配置一次）
 
-#### 1. 清除本地用户名和密码
+#### 1. 清除本地用户名和密码(不需要)
 
 ```
 git config --system --unset credential.helper
 ```
 
-#### 2. 执行以下命令后，再次pull或push时会缓存输入的用户名和密码
+#### 2. 执行以下命令后，再次pull或push时会缓存输入的用户名和密码（不需要）
 
 ```
 git config --global credential.helper store
@@ -29,13 +29,13 @@ git config --global credential.helper store
 #### 3. 上传代码用户名
 
 ```jAVA
-git config --global user.name "用户名"  // 需要加""
+git config --global user.name "github用户名"  // 需要加""
 ```
 
 #### 4. 上传代码邮箱
 
 ```
-git config --global user.email "邮箱" // 需要加""
+git config --global user.email "github邮箱" // 需要加""
 ```
 
 ### 三、本地仓库上传到远程仓库
@@ -48,7 +48,7 @@ git config --global user.email "邮箱" // 需要加""
 git init  // 初始化本地仓库
 ```
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220718090354402.png" alt="image-20220718090354402" style="zoom:67%;" />
+<img src="F:\Git\img\image-20220718090354402.png" alt="image-20220718090354402" style="zoom:67%;" />
 
 执行以上命令，我们能够发现在当前目录下多了一个`.git`的目录，这个目录是Git来跟踪管理版本库的，千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。
 
@@ -67,7 +67,7 @@ git add . // 先上载缓存 将所有文件添加到本地仓库（也可添加
 git commit -m “first commit”          //将项目提交到本地git仓库 （“first commit” 是备注信息）
 ```
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220718090640068.png" alt="image-20220718090640068" style="zoom:67%;" />
+<img src="F:\Git\img\image-20220718090640068.png" alt="image-20220718090640068" style="zoom:67%;" />
 
 #### 4、将本地仓库与远程仓库进行关联
 
@@ -76,9 +76,9 @@ git remote -v  //检查远程仓库配置
 git remote add origin +  //远程仓库地址, "origin" 是起的别名 可替换
 ```
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220717214930505.png" alt="image-20220717214930505" style="zoom: 50%;" />
+<img src="F:\Git\img\image-20220717214930505.png" alt="image-20220717214930505" style="zoom: 50%;" />
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220718090750015.png" alt="image-20220718090750015" style="zoom:67%;" />
+<img src="F:\Git\img\image-20220718090750015.png" alt="image-20220718090750015" style="zoom:67%;" />
 
 #### 5、先将关联后的github仓库中的代码pull下来
 
@@ -86,7 +86,7 @@ git remote add origin +  //远程仓库地址, "origin" 是起的别名 可替�
 git pull origin main
 ```
 
-![image-20220718090936675](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220718090936675.png)
+![image-20220718090936675](F:\Git\img\image-20220718090936675.png)
 
 #### 6、将最新的修改推送到远程仓库 将本地仓库的文件推送到远程仓库
 
@@ -94,7 +94,7 @@ git pull origin main
 git push -u origin main
 ```
 
-![image-20220718091209924](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220718091209924.png)
+![image-20220718091209924](F:\Git\img\image-20220718091209924.png)
 
 ### 四、常见错误：
 
@@ -148,6 +148,17 @@ git pull origin main
 ```
 
 #### 错误4：
+
+出现下面错误：
+
+```J
+To https://github.com/MrWang1218/Test.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/MrWang1218/Test.git'
+
+```
+
+**解决方法：**
 
 
 
