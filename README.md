@@ -1,6 +1,6 @@
 # Github团队协作
 
-- ### Git常用命令
+### 一、Git常用命令
 
 | 命令名称                           | 作用                                                      |
 | ---------------------------------- | --------------------------------------------------------- |
@@ -12,13 +12,37 @@
 | git config --global -l             | 查看git 配置                                              |
 |                                    |                                                           |
 
-- ### git修改本地用户名和邮箱
+### 二、git修改本地用户名和邮箱（安装git时候配置一次）
 
-### 本地仓库上传到远程仓库
+#### 1. 清除本地用户名和密码
+
+```
+git config --system --unset credential.helper
+```
+
+#### 2. 执行以下命令后，再次pull或push时会缓存输入的用户名和密码
+
+```
+git config --global credential.helper store
+```
+
+#### 3. 上传代码用户名
+
+```jAVA
+git config --global user.name "用户名"  // 需要加""
+```
+
+#### 4. 上传代码邮箱
+
+```
+git config --global user.email "邮箱" // 需要加""
+```
+
+### 三、本地仓库上传到远程仓库
 
 在当前文件目录下执行一下操作:
 
-**1、初始化一个本地Git仓库**
+#### **1、初始化一个本地Git仓库**
 
 ```Java
 git init  // 初始化本地仓库
@@ -71,3 +95,66 @@ git push -u origin main
 ```
 
 ![image-20220718091209924](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220718091209924.png)
+
+### 四、常见错误：
+
+#### 错误1：
+
+执行 pull，push, clone等出现下面错误
+
+```
+error: RPC failed； curl 28 OpenSSL SSL_read: Connection was reset, errno 10054 fatal: expected
+```
+
+解决方法：执行下面代码重试即可：
+
+```
+git config --global http.sslVerify "false"
+```
+
+#### 错误2：
+
+出现下面错误：
+
+```
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/MrWang1218/Cog.git/'
+```
+
+意思是不再支持用户名密码的方式验证了，需要创建个人访问令牌(personal access token)。
+
+**解决方法**：[(42条消息) 解决 remote Support for password authentication was removed on August 13, 2021._ASDDAG的博客-CSDN博客](https://blog.csdn.net/qq_50840738/article/details/125087816)
+
+#### 错误3：
+
+出现下面错误：
+
+```
+error: Pulling is not possible because you have unmerged files
+```
+
+解决方法：
+
+```Java
+//注释：提交本地代码到工作区
+//注释：如果有冲突，先解决冲突合并代码，然后提交
+//注释：如果代码上没有冲突，但是提交的时候git提醒有冲突，那么先关闭编辑器，然后编译代码找到冲突，最后手动合并代码解决冲突
+git add .
+git commit -m '提交本地代码并且获取最新代码'
+//注释：获取分支最新代码
+git pull origin main
+//注释：如有冲突就解决冲突
+```
+
+#### 错误4：
+
+#### 错误5：
+
+#### 错误6：
+
+#### 错误7：
+
+#### 错误8：
+
+#### 错误9：
