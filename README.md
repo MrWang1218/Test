@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Github团队协作
 
 ### 一、Git常用命令
@@ -171,3 +172,6 @@ error: failed to push some refs to 'https://github.com/MrWang1218/Test.git'
 #### 错误8：
 
 #### 错误9：
+=======
+# Test
+>>>>>>> 64b143ef006301866a958128cfd486f57d9a2ea0
