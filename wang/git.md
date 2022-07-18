@@ -1,3 +1,9 @@
+## Github团队协作
+
+​		[(42条消息) Git —— 4、团队协作机制及GitHub操作_Mr_zhangyj的博客-CSDN博客_github团队协作](https://blog.csdn.net/Mr_zhangyj/article/details/123752142)
+
+各种错误解决：[(42条消息) git各种报错的原因---规范步骤【小爽爽记录】_康斯坦奇的博客-CSDN博客](https://blog.csdn.net/qq_40245974/article/details/124646537)
+
 ## [Git——本地仓库与远程仓库关联](https://www.cnblogs.com/dreamstartplace/p/15831037.html)
 
 在当前文件目录下执行一下操作:
