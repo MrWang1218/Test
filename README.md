@@ -63,7 +63,7 @@ git branch -m master main
 #### 3、将所有文件添加到本地仓库（也可添加你所需的文件）
 
 ```Java
-git add . // 将所有文件添加到本地仓库（也可添加你所需的文件） .代表添加文件夹下所有文件。
+git add . // 先上载缓存 将所有文件添加到本地仓库（也可添加你所需的文件） .代表添加文件夹下所有文件。 
 git commit -m “first commit”          //将项目提交到本地git仓库 （“first commit” 是备注信息）
 ```
 
@@ -148,6 +148,8 @@ git pull origin main
 ```
 
 #### 错误4：
+
+
 
 #### 错误5：
 
